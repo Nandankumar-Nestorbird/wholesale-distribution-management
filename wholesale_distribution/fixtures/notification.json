@@ -1,0 +1,49 @@
+[
+ {
+  "attach_files": "",
+  "attach_print": 0,
+  "channel": "Email",
+  "condition": null,
+  "condition_type": "Python",
+  "date_changed": null,
+  "datetime_changed": null,
+  "datetime_last_run": null,
+  "days_in_advance": 0,
+  "docstatus": 0,
+  "doctype": "Notification",
+  "document_type": "Sales Invoice",
+  "email_template": null,
+  "enabled": 1,
+  "event": "Submit",
+  "filters": null,
+  "from_attach_field": null,
+  "is_standard": 0,
+  "message": "\n<p>Hello Finance Team,</p>\n\n<p>\nA new Sales Invoice has been successfully submitted in ERPNext.\n</p>\n\n<table border=\"1\" cellpadding=\"8\" cellspacing=\"0\"\n       style=\"border-collapse: collapse; width: 100%;\">\n\n    <tr>\n        <th align=\"left\">Invoice Number</th>\n        <td>{{ doc.name }}</td>\n    </tr>\n\n    <tr>\n        <th align=\"left\">Customer Name</th>\n        <td>{{ doc.customer_name }}</td>\n    </tr>\n\n    <tr>\n        <th align=\"left\">Customer</th>\n        <td>{{ doc.customer }}</td>\n    </tr>\n\n    <tr>\n        <th align=\"left\">Posting Date</th>\n        <td>{{ doc.get_formatted(\"posting_date\") }}</td>\n    </tr>\n\n    <tr>\n        <th align=\"left\">Grand Total</th>\n        <td>{{ doc.get_formatted(\"grand_total\") }}</td>\n    </tr>\n\n    <tr>\n        <th align=\"left\">Company</th>\n        <td>{{ doc.company }}</td>\n    </tr>\n\n    <tr>\n        <th align=\"left\">Status</th>\n        <td>Submitted</td>\n    </tr>\n\n</table>\n\n<p>\nPlease review the invoice and update the relevant accounting records.\n</p>\n\n<p>\nRegards,<br>\nWholesale Distribution Company\n</p>\n",
+  "message_type": "Markdown",
+  "method": null,
+  "minutes_offset": 0,
+  "modified": "2026-11-16 20:51:16.671848",
+  "module": null,
+  "name": "Sales Invoice Submitted",
+  "notification_type": "Alert",
+  "print_format": null,
+  "property_value": null,
+  "recipients": [
+   {
+    "bcc": null,
+    "cc": null,
+    "condition": null,
+    "receiver_by_document_field": null,
+    "receiver_by_role": "Accounts User"
+   }
+  ],
+  "send_system_notification": 0,
+  "send_to_all_assignees": 0,
+  "sender": null,
+  "sender_email": null,
+  "set_property_after_alert": null,
+  "slack_webhook_url": null,
+  "subject": " Sales Invoice Submitted - {{ doc.name }}",
+  "value_changed": null
+ }
+]

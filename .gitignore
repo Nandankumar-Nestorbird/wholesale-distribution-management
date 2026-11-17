@@ -53,3 +53,44 @@ jspm_packages/
 
 # Aider AI Chat
 .aider*
+
+# Python
+*.pyo
+*.so
+
+# Virtual environments
+.venv/
+env/
+
+# Environment variables and secrets
+.env.*
+!.env.example
+
+# Database and backups
+*.sql
+*.sql.gz
+*.bak
+*.dump
+*.backup
+
+# Frappe site configuration
+sites/*/site_config.json
+sites/*/private/
+sites/*/public/files/
+
+# Logs
+*.log
+logs/
+
+# IDE
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Test artifacts
+.coverage
+.pytest_cache/
+htmlcov/

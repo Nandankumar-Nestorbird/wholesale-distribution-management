@@ -277,3 +277,37 @@ app_license = "mit"
 # List of apps whose translatable strings should be excluded from this app's translations.
 # ignore_translatable_strings_from = []
 
+fixtures = [
+    {
+        "dt": "Custom Field",
+        "filters": [
+            ["name", "in", [
+                "Item-custom_minimum_stock_level"
+            ]]
+        ]
+    },
+    {
+        "dt": "Client Script",
+        "filters": [
+            ["dt", "=", "Item"]
+        ]
+    },
+    {
+        "dt": "Server Script",
+        "filters": [
+            ["reference_doctype", "=", "Sales Order"]
+        ]
+    },
+    {
+        "dt": "Workflow",
+        "filters": [
+            ["name", "=", "Purchase Order Approval"]
+        ]
+    },
+    {
+        "dt": "Notification",
+        "filters": [
+            ["name", "=", "Sales Invoice Submitted"]
+        ]
+    }
+]
